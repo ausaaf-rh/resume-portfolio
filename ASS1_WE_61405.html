@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ausaaf Raza - Resume</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+}
+.resume-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+/* Header with blue triangle and photo */
+.header {
+  display: flex;
+  position: relative;
+  background-color: white;
+  height: 180px;
+}
+.photo-container {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+}
+.blue-triangle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0099cc;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  z-index: 1;
+}
+.profile-photo {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  top: 25px;
+  left: 25px;
+  z-index: 2;
+}
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.name-title {
+  flex-grow: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.name {
+  color: #0099cc;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+.title {
+  color: #666;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+/* Content layout */
+.content {
+  display: flex;
+}
+.left-column {
+  width: 35%;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+.right-column {
+  width: 65%;
+  padding: 20px;
+}
+/* Section styles */
+.section-title {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 15px 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #0099cc;
+}
+.about-me {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+/* Skills section */
+.skills-container {
+  margin-bottom: 20px;
+}
+.skill {
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.skill-name {
+  display: block;
+  margin-bottom: 3px;
+  color: #555;
+}
+.skill-bar-bg {
+  height: 6px;
+  background-color: #ddd;
+  border-radius: 3px;
+}
+.skill-bar-fill {
+  height: 100%;
+  background-color:#777;
+  border-radius: 3px;
+}
+/* Software & Languages section */
+.software-languages {
+  display: flex;
+  margin-top: 20px;
+}
+.software-column, .languages-column {
+  flex: 1;
+}
+.software-title, .languages-title {
+  color: #0099cc;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.item-list {
+  font-size: 12px;
+  color: #555;
+  list-style-type: none;
+}
+.item-list li {
+  margin-bottom: 3px;
+}
+/* Contact section */
+.contact-info {
+  margin-top: 20px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.contact-icon {
+  width: 18px;
+  margin-right: 10px;
+  color: #0099cc;
+}
+/* Right column sections */
+.section {
+  margin-bottom: 20px;
+}
+.experience-item, .education-item {
+  margin-bottom: 15px;
+  position: relative;
+  padding-left: 10px;
+}
+.job-title, .degree {
+  font-weight: bold;
+  font-size: 14px;
+  color: #444;
+}
+.company, .university {
+  font-size: 13px;
+  color: #0099cc;
+  margin-left: 20px;
+}
+.duration {
+  font-size: 12px;
+  font-style: italic;
+  color: #777;
+}
+.job-description, .education-description {
+  font-size: 12px;
+  margin-top: 5px;
+  padding-left: 20px;
+}
+/* Hobbies section */
+.hobbies {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.hobby {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 16%;
+}
+.hobby-icon {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 5px;
+}
+.hobby-name {
+  font-size: 11px;
+  text-align: center;
+}
+/* References */
+.reference {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+.reference-name {
+  font-weight: bold;
+}
+.reference-title {
+  font-style: italic;
+  color: #555;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .left-column, .right-column {
+    width: 100%;
+  }
+  .name {
+    font-size: 20px;
+  }
+  .hobby {
+    width: 20%;
+  }
+}
+</style>
+</head>
+<body>
+<div class="resume-container">
+  <!-- Header with photo and name -->
+  <div class="header">
+    <div class="photo-container">
+      <div class="blue-triangle"></div>
+      <div class="profile-photo">
+        <img src="Assessments/ASS#1/HTML/IMG/FB_IMG_1656339809849.jpg" alt="Ausaaf Raza">
+      </div>
+    </div>
+    <div class="name-title">
+      <h1 class="name">MUHAMMAD AUSAAF RAZA HASHMI</h1>
+      <h2 class="title">Web Designer</h2>
+    </div>
+  </div>
+  
+  <!-- Main content -->
+  <div class="content">
+    <!-- Left Column -->
+    <div class="left-column">
+      <!-- About Me -->
+      <h3 class="section-title">ABOUT ME</h3>
+      <div class="about-me">
+        I am a dedicated, organized and methodical individual. I have good interpersonal skills, am an excellent team worker and am keen and very willing to learn and develop new skills. I am reliable & I have an active and dynamic approach to work and getting things done.
+      </div>
+      
+      <!-- Skills -->
+      <h3 class="section-title">SKILLS</h3>
+      <div class="skills-container">
+        <div class="skill">
+          <span class="skill-name">COMMUNICATION</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">PROGRAMMING</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 65%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">DESIGNING</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 60%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">COORDINATION</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 75%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">LEADERSHIP</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 65%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span class="skill-name">TEAMWORK</span>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Software & Languages -->
+      <div class="software-languages">
+        <div class="software-column">
+          <h4 class="software-title">SOFTWARE</h4>
+          <ul class="item-list">
+            <li>MS OFFICE</li>
+            <li>Word Press</li>
+          </ul>
+        </div>
+        <div class="languages-column">
+          <h4 class="languages-title">LANGUAGES</h4>
+          <ul class="item-list">
+            <li>JAVA, C/C++</li>
+            <li>Python</li>
+            <li>MsSQL</li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Contact Info -->
+      <h3 class="section-title">CONTACT</h3>
+      <div class="contact-info">
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>Address: Mehmoodabad, Khi</span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <span>Phone: 0348-6897479 </span>
+        </div>
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <span>Email: ausaaf.61405@iqra.edu.pk</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Right Column -->
+    <div class="right-column">
+      <!-- Work Experience -->
+      <h3 class="section-title">WORK EXPERIENCE</h3>
+      <div class="experience-item">
+        <div class="job-title">Sales-Person</div>
+        <div class="company">Sapphire Retail Limited</div>
+        <div class="duration">2019</div>
+        <div class="job-description">
+          5 days Activity in Sapphire Retail Limited as a Sales-Person. I was responsible for assisting customers, managing inventory, and ensuring a positive shopping experience.
+        </div>
+      </div>
+      <div class="experience-item">
+        <div class="job-title">Sales-Person</div>
+        <div class="company">Colgate-Palmolive</div>
+        <div class="duration">2024</div>
+        <div class="job-description">
+          5 days Activity in Colgate-Palmolive as a Sales-Person. I was responsible for promoting and selling products, providing customer service, and maintaining product displays.
+        </div>
+      </div>
+      
+      <!-- Education -->
+      <h3 class="section-title">EDUCATION</h3>
+      <div class="education-item">
+        <div class="degree">BACHELOR IN SOFTWARE ENGINEERING</div>
+        <div class="university">Iqra University(Main Campus)</div>
+        <div class="duration">2022 - Present</div>
+        <div class="education-description">
+          In Progress
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="degree">INTERMEDIATE</div>
+        <div class="university">Govt. Degree College,Ibrahim Hyderi,Karachi </div>
+        <div class="duration">2020 - 2022</div>
+        <div class="education-description">
+          Cleared Pre-Engineering through Intermediate board.
+        </div>
+      </div>
+      <div class="education-item">
+        <div class="degree">MATRICULATION</div>
+        <div class="university">STS.PETER & PAUL ENGLISH HIGH SCHOOL,KARACHI </div>
+        <div class="duration">2016 - 2019</div>
+        <div class="education-description">
+          Cleared Science through Sindh board.
+        </div>
+      </div>
+      
+      <!-- Hobbies -->
+      <h3 class="section-title">HOBBIES</h3>
+      <div class="hobbies">
+        <div class="hobby">
+          <span class="hobby-icon">🏓</span>
+          <span class="hobby-name">Table Tennis </span>
+        </div>
+        <div class="hobby">
+          <span class="hobby-icon">🎮</span>
+          <span class="hobby-name">Gaming</span>
+        </div>
+        <div class="hobby">
+          <span class="hobby-icon">🚴</span>
+          <span class="hobby-name">Traveling</span>
+        </div>
+        <div class="hobby">
+          <span class="hobby-icon">📖</span>
+          <span class="hobby-name">Reading</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
