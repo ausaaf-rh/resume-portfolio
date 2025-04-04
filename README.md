@@ -13,6 +13,6 @@ This is a single-page resume with a modern design featuring sections for work ex
 ## Files
 - index.html - The resume webpage
 - Img/profile-photo.jpg - Profile picture
-- screenshots/resume-preview.jpg - Backup screenshot
+- Img/resume-preview.png - Backup screenshot
 
 Works best in Chrome, Firefox & Edge.
